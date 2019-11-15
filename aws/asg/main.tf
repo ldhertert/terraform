@@ -36,7 +36,7 @@ module "asg" {
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "~> 3.0"
 
-  name = "${var.name}"
+  name = "${var.name}-template"
 
   # Launch configuration
   lc_name = "${var.name}-lc"
@@ -99,7 +99,7 @@ module "elb" {
   ]
 
   health_check = {
-    target              = "HTTP:${var.instance_port}/"
+    target              = "HTTP:${var.instance_port}${var.instance_health_path}"
     interval            = 30
     healthy_threshold   = 2
     unhealthy_threshold = 2
