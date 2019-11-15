@@ -9,15 +9,15 @@ variable "vpc_id" {
 }
 
 variable "max_size" {
-  default = 1
+  default = 0
 }
 
 variable "min_size" {
-  default = 1
+  default = 0
 }
 
 variable "desired_capacity" {
-  default = 1
+  default = 0
 }
 
 variable "instance_security_groups" {
@@ -54,6 +54,10 @@ variable "lb_listen_protocol" {
 
 variable "instance_port" {
   default = "80"
+}
+
+variable "instance_health_path" {
+  default = "/"
 }
 
 
