@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+#note this is for amazon linux.  not tested as userdata yet, only manual commands
+
 sudo yum update -y
 sudo amazon-linux-extras install docker -y
 sudo service docker start
