@@ -8,6 +8,7 @@ resource "google_container_cluster" "primary" {
   project            = var.project
   initial_node_count = 3
 
+  # Note: I was unable to get a healthy cluster in GKE with basic auth enabled on any master version above 1.16
   min_master_version = "1.16"
 
   node_config {
