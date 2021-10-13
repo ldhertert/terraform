@@ -1,0 +1,20 @@
+env:
+  DRONE_SERVER_HOST: drone.34.150.223.29.nip.io
+  DRONE_SERVER_PROTO: http
+  DRONE_RPC_SECRET: randomly-generated-secret-here
+  DRONE_GITHUB_CLIENT_ID: 46c9a4d6cfa8c107133c
+  DRONE_GITHUB_CLIENT_SECRET: 4da306a5259c5cd8f36d8cd4847e33d918c47738
+
+ingress:
+  enabled: true
+  annotations: 
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+  hosts:
+    - host: drone.34.150.223.29.nip.io
+      paths:
+        - "/"
+  # tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
