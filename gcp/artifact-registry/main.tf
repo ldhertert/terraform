@@ -1,6 +1,7 @@
 provider "google" {
   project = "${var.project}"
   region = "${var.region}"
+  credentials = "${var.credentials}"
 }
 
 resource "google_artifact_registry_repository" "my-repo" {
@@ -18,6 +19,11 @@ variable "project" {
 variable "region" {
   type = string
   default = "us-central1"
+}
+
+variable "credentials" {
+  type = string
+  default = ""
 }
 
 variable "repository_name" {
