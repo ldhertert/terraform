@@ -1,3 +1,4 @@
+/*
 provider "harness" {
   account_id = "KaZNXe69Qzm8KOo8bGCwwg"
 }
@@ -16,3 +17,4 @@ resource "harness_platform_secret_text" "azure_cloud_provider_client_secret" {
     ]
   }
 }
+*/

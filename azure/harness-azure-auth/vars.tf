@@ -6,23 +6,17 @@ variable "email" {
 
 variable "environment" {
   type    = string
-  default = "local"
+  default = "unknown"
 }
 
 variable "app_registration_name" {
   description = "The name for the app registration"
   type        = string
-  default     = "harness-app"
+  default     = "harness_app"
 }
 
-variable "azure_credential_name" {
-  description = "The name for the azure credentials"
+variable "role_name" {
+  description = "The role to assign to the service principle"
   type        = string
-  default     = "Azure Client Secret"
-}
-
-variable "secret_manager" {
-  description = "The secret manager that should be used to store that azure credentials."
-  type = string
-  default = "harnessSecretManager"
+  default     = "Contributor"
 }
