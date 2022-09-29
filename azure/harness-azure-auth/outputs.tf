@@ -10,7 +10,3 @@ output "client_secret" {
 output "tenant_id" {
   value = data.azurerm_client_config.current.tenant_id
 }
-
-output "secretId" {
-  value = harness_platform_secret_text.azure_cloud_provider_client_secret.identifier
-}
