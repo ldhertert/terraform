@@ -74,7 +74,9 @@ resource "azurerm_role_definition" "harness_app_services_deployer_role" {
       "Microsoft.Web/sites/Write",
       "microsoft.web/sites/containerlogs/action",
       "Microsoft.Web/sites/publish/Action",
-      "Microsoft.Web/sites/slots/publish/Action"
+      "Microsoft.Web/sites/slots/publish/Action",
+      "Microsoft.Resources/subscriptions/resourceGroups/read",
+      "Microsoft.Resources/subscriptions/resourcegroups/resources/read"
     ]
   }
 
